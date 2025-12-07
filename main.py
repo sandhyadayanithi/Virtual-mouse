@@ -60,12 +60,12 @@ while True:
 
       mp_draw.draw_landmarks(frame, hand_landmarks, mp_hand.HAND_CONNECTIONS)
 
+  frame=cv.cvtColor(frame,cv.COLOR_RGB2BGR)
+  cv.imshow('Webcam',frame)
+
   key=cv.waitKey(20)
   if key==ord('q'):
     break
-  
-  frame=cv.cvtColor(frame,cv.COLOR_RGB2BGR)
-  cv.imshow('Webcam',frame)
 
 video.release()
 cv.destroyAllWindows()
